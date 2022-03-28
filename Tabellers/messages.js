@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require('./database')
+const sequelize = require('../database/database')
 
 class messages extends Model{}
 
@@ -17,7 +17,9 @@ messages.init({
 
 }, {
     sequelize,
-    modelName:'messages'
+    modelName:'messages',
+    timestamps: false
+
 })
 
 module.exports = messages
